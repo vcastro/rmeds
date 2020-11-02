@@ -1,0 +1,28 @@
+Package: rmeds
+Title: Map Prescribed Medications Using RXNORM And Common Drug Classifications
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Victor",
+           family = "Castro",
+           role = c("aut", "cre"),
+           email = "victormcastrojr@gmail.com",
+           comment = c(ORCID = "https://orcid.org/0000-0001-7390-6354"))
+Description: Map medications from electronic health record (EHR) and claims
+    datasets to the RXNORM vocabulary and also to various drug classes. The
+    package contains mapping datasets from the RXNORM prescribable subset
+    <doi:> and groupings to FDA Established Pharmaceutical Classes (EPC), VA
+    drug classes (VA) and Anatomic Therapeutic Chemical (ATC) classifications
+    extracted from RxMix <doi:>. Additional functions construct ontology
+    representations in i2b2 format <doi:>.
+License: CC BY 4.0
+Encoding: UTF-8
+LazyData: true
+URL: https://github.com/vcastro/rmeds
+BugReports: https://github.com/vcastro/rmeds/issues
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+Depends: 
+    R (>= 2.10)
+Suggests: 
+    testthat (>= 2.1.0),
+    tibble
