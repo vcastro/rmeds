@@ -16,39 +16,30 @@ knitr::opts_chunk$set(
 # rmeds
 
 <!-- badges: start -->
+[![R build status](https://github.com/vcastro/rmeds/workflows/R-CMD-check/badge.svg)](https://github.com/vcastro/rmeds/actions)
 <!-- badges: end -->
 
-The goal of rmeds is to ...
+The goal of rmeds is to map medications from electronic health record (EHR) and 
+claims datasets to RXNORM ingredients and to drug classes including
+FDA Established Pharmaceutical Classes (EPC), VA drug classes (VA) and Anatomic 
+Therapeutic Chemical (ATC) classifications.  
 
 ## Installation
 
-You can install the released version of rmeds from [CRAN](https://CRAN.R-project.org) with:
+You can install the development version of rmeds from GitHub with:
 
 ``` r
-install.packages("rmeds")
+# install.packages("devtools")
+devtools::install_github("vcastro/rmeds")
 ```
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+This is a basic example to load the full list of RXNORM ingredients:
 
 ```{r example}
 library(rmeds)
-## basic example code
+
+## load list of ingredients
+data("rxnorm_in")
 ```
-
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
-
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub!
